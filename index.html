@@ -16,6 +16,70 @@
     margin: 0 auto;
   }
 
+  /* New Showcase Section */
+  .rb-showcase {
+    margin-bottom: 80px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rb-showcase-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .rb-showcase-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .rb-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .rb-showcase-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .rb-showcase-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .rb-showcase-card:hover {
+    transform: translateY(-5px);
+    border-color: #0091ff;
+  }
+
+  .rb-showcase-card-title {
+    color: #0091ff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .rb-showcase-card-text {
+    color: #8892b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   /* Footer */
   
   .rb-copyright {
@@ -133,6 +197,10 @@
     .rb-social-icons {
       margin-top: 10px;
     }
+
+    .rb-showcase-grid {
+      grid-template-columns: 1fr;
+    }
   }
   
   @media (max-width: 768px) {
@@ -163,8 +231,11 @@
     .rb-divider-text {
       font-size: 12px;
     }
-  }
 
+    .rb-showcase-title {
+      font-size: 2rem;
+    }
+  }
 
 
   /* From Uiverse.io by _7754 */ 
@@ -245,6 +316,26 @@
 
 <div class="rb-landing">
   <div class="rb-container">
+    
+    <!-- New Showcase Section -->
+    <section class="rb-showcase">
+      <h2 class="rb-showcase-title rb-fade-in">Modern Footer Design Showcase</h2>
+      <div class="rb-showcase-grid">
+        <div class="rb-showcase-card rb-fade-in">
+          <h3 class="rb-showcase-card-title">Clean & Professional</h3>
+          <p class="rb-showcase-card-text">This footer design features a sophisticated dark theme with accent colors that highlight key elements while maintaining excellent readability and brand consistency.</p>
+        </div>
+        <div class="rb-showcase-card rb-fade-in">
+          <h3 class="rb-showcase-card-title">Animated Interactions</h3>
+          <p class="rb-showcase-card-text">Smooth fade-in animations on scroll and interactive social media icons with hover effects create an engaging user experience that feels modern and responsive.</p>
+        </div>
+        <div class="rb-showcase-card rb-fade-in">
+          <h3 class="rb-showcase-card-title">Fully Responsive</h3>
+          <p class="rb-showcase-card-text">Built with mobile-first approach, this footer adapts seamlessly across all devices while maintaining its elegant design and functional layout.</p>
+        </div>
+      </div>
+    </section>
+
     <header class="rb-header">
       
       <div class="rb-contact-wrapper">
