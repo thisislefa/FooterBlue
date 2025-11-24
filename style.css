@@ -1,0 +1,312 @@
+  /* Base styles */
+  .rb-landing {
+    font-family: 'Inter', sans-serif;
+    color: #06273e;
+    background-color: #061121;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    opacity: 8;
+  }
+  
+  .rb-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* New Showcase Section */
+  .rb-showcase {
+    margin-bottom: 80px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rb-showcase-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .rb-showcase-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .rb-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .rb-showcase-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .rb-showcase-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .rb-showcase-card:hover {
+    transform: translateY(-5px);
+    border-color: #0091ff;
+  }
+
+  .rb-showcase-card-title {
+    color: #0091ff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .rb-showcase-card-text {
+    color: #8892b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  
+  .rb-copyright {
+    color: #a0afbe;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 1;
+  }
+  
+  /* Header section */
+  .rb-header {
+    margin-bottom: 7px;
+  }
+  
+  .rb-heading {
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 1;
+    margin-bottom: 10px;
+    color: #8892b0;
+  }
+  
+  /* Contact info */
+  .rb-contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .rb-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Social icons */
+  .rb-social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .rb-social-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .rb-social-icon:hover {
+    color: #061f2f;
+  }
+  
+  .rb-social-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* New divider with text */
+  .rb-divider-with-text {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+  }
+  
+  .rb-divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(175, 175, 175, 0.46);
+  }
+  
+  .rb-divider-text {
+    padding-left: 15px;
+    color: #0091ff;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  /* Animation classes */
+  .rb-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .rb-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1240px) {
+    .rb-container {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .rb-contact-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    
+    .rb-social-icons {
+      margin-top: 10px;
+    }
+
+    .rb-showcase-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rb-heading {
+      font-size: 22px;
+    }
+    
+    .rb-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    
+    .rb-footer-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .rb-contact {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .rb-contact-wrapper {
+      margin-bottom: 30px;
+    }
+    
+    .rb-divider-text {
+      font-size: 12px;
+    }
+
+    .rb-showcase-title {
+      font-size: 2rem;
+    }
+  }
+
+
+  /* From Uiverse.io by _7754 */ 
+.container {
+  display: flex;
+  column-gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 15px;
+  outline: 2px solid #0091ff;
+  border-radius: 50%;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+  color: #0091ff;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+  color: white;
+}
+
+.icon svg {
+  margin: auto;
+  width: 22px;
+}
+
+.icon-instagram:hover {
+  background-color: red;
+  outline-color: red;
+}
+
+.icon-dis:hover {
+  background-color: rgb(76, 0, 255);
+  outline-color: rgb(76, 0, 255);
+}
+
+.icon-github:hover {
+  background-color: #302f2f;
+  outline-color: #302f2f;
+}
+
+.icon-in:hover {
+  background-color: #0a66c2;
+  outline-color: #0a66c2;
+}
+
+.icon-twitter:hover {
+  background-color: #000000;
+  outline-color: #000000;
+}
+
+.icon-facebook:hover {
+  background-color: #1877f2;
+  outline-color: #1877f2;
+}
+
+.icon:hover svg {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+}
